@@ -1,0 +1,6 @@
+The program will detail a market with multiple stalls.
+these stalls will display user prompts in order, for the user to input their desired purchases and purchase.
+display the items available at the stall, prompt user for a decision to purchase or leave.
+display a budget for the person.
+can return an item if too expensive or the customer does not wish to purchase.
+display prices of items, changing budget dynamically.
