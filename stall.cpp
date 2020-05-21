@@ -5,8 +5,17 @@ using namespace std;
 int stall::stallID = 0;
 
 stall::stall(){
+	stallID++;
+	myID = stallID;
 	stallName = "?";
 	stallType = "??";
+}
+
+stall::stall(string name, string type){
+	stallID++;
+	myID = stallID;
+	stallName = name;
+	stallType = type;
 }
 
 void stall::setName(string name){
@@ -31,6 +40,6 @@ int stall::getID(){
 	return myID;
 }
 
-int main(){
-	return 0;
+stall::~stall(){
+	
 }
