@@ -6,7 +6,7 @@ using namespace std;
 
 item::item()
 {
-	name="unknown"
+	name="unknown";
 	description="unknown";
 	price=0;
 
@@ -29,7 +29,7 @@ string item::get_Name()
 	return name;
 }
 
-int item::get_Price
+int item::get_Price()
 {
 	return price;
 }

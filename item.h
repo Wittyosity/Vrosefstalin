@@ -16,8 +16,8 @@ public:
 // a constructor that takes the item description and the item code number as inputs
 	item(string myName, string myDescription, int myPrice);
 	string get_Description();  
-	sring get_Name();  // returns the item description
-	int get_price();       // returns the code number of the item
-	~price();     //A default destructor
+	string get_Name();  // returns the item description
+	int get_Price();       // returns the code number of the item
+	~item();     //A default destructor
 }; 
 #endif //PRICE_H
