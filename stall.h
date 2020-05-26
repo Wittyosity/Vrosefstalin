@@ -1,6 +1,8 @@
 #ifndef STALL_H
 #define STALL_H
 #include <string>
+#include <vector>
+#include "item.h"
 using namespace std;
 
 class stall {
@@ -22,9 +24,15 @@ public :
 	// returns the id of the object
 	int getID();
 
+	//Adds item to stall inventory
+	void addItem(item* ptr);
+
 	// states for stall
+	
+
 	static int stallID;
 	int myID;
+	int* Inventory;
 	string stallName;
 	string stallType;
 
