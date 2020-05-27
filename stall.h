@@ -28,6 +28,14 @@ public :
 	void addItem(item* ptr);
 
 	// states for stall
+
+
+	// mitch added this
+	 void printList();
+	
+
+
+
 	
 
 	static int stallID;
@@ -35,6 +43,7 @@ public :
 	int* Inventory;
 	string stallName;
 	string stallType;
+	int index;
 
 	//default destructor
 	~stall();

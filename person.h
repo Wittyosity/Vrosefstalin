@@ -16,14 +16,10 @@ public:
 	//behaviours to set and return budget
 	void setBudget(int budget);
 	int getBudget();
-	//Adds item to person
-	void addItem(item* ptr);
-	//define variables
+	//default destructor
 	int budget, myBudget;
 	string pName, myPname;
-	//default destructor
 	~person();
-
 
 };
 #endif

@@ -13,6 +13,7 @@ stall::stall(){
 	myID = stallID;
 	stallName = "?";
 	stallType = "??";
+	index=0;
 }
 
 stall::stall(string name, string type){
@@ -20,10 +21,13 @@ stall::stall(string name, string type){
 	myID = stallID;
 	stallName = name;
 	stallType = type;
+	index=0;
 }
 
 void stall::addItem(item* ptr){
 	itemInventory.push_back(ptr);
+	index++;
+	cout << "yep" << endl;
 	return;
 }
 
@@ -49,6 +53,19 @@ int stall::getID(){
 	return myID;
 }
 
+void stall::printList()
+{
+	cout << "Name" << "\tPrice" << "\tDescription" << endl;
+	for (int i=0;i<index;i++)
+	{
+		cout << "yep" << endl;
+		//cout << itemInventory[i]->get_Name() << "\t" << itemInventory[i]->get_Price() << "\t" << itemInventory[i]->get_Description() << endl;
+	cout << itemInventory.at(i)->get_Name() << endl;
+}
+
+	std::cout << "myvector stores " << int(itemInventory.size()) << " numbers.\n";
+
+}
 stall::~stall(){
 	
 }
