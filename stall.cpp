@@ -31,6 +31,11 @@ void stall::addItem(item* ptr){
 	return;
 }
 
+item* stall::getItem(int j)
+{
+	return itemInventory[j-1];
+}
+
 void stall::setName(string name){
 	stallName = name;
 	return;
@@ -46,6 +51,7 @@ void stall::setType(string type){
 }
 
 string stall::getType(){
+
 	return stallType;
 }
 
@@ -55,11 +61,11 @@ int stall::getID(){
 
 void stall::printList()
 {
-	cout << "Name" << "\tPrice" << "\tDescription" << endl;
+	cout <<"ID" << "\tName" << "\tPrice" << "\tDescription" << endl;
 	for (int i=0;i<index;i++)
 	{
 		//cout << "yep" << endl;
-		cout << itemInventory[i]->get_Name() << "\t" << itemInventory[i]->get_Price() << "\t" << itemInventory[i]->get_Description() << endl;
+		cout << itemInventory[i]->get_ID() << "\t" << itemInventory[i]->get_Name() << "\t" << itemInventory[i]->get_Price() << "\t" << itemInventory[i]->get_Description() << endl;
 }
 
 	//std::cout << "myvector stores " << int(itemInventory.size()) << " numbers.\n";

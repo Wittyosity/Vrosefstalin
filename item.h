@@ -18,6 +18,9 @@ public:
 	string get_Description();  
 	string get_Name();  // returns the item description
 	int get_Price();       // returns the code number of the item
+	int get_ID();
+	static int itemID;
+	int myID;
 	~item();     //A default destructor
 }; 
 #endif //PRICE_H

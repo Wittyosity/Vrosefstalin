@@ -32,6 +32,7 @@ vector<item*> itemInventory;
 
 	// mitch added this
 	 void printList();
+	 item* getItem(int j);
 	
 
 
