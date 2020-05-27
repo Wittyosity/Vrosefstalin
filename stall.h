@@ -7,7 +7,7 @@ using namespace std;
 
 class stall {
 public : 
-
+vector<item*> itemInventory;
 	// default constructor
 	// and constructor allowing name and type to be set
 	stall();
