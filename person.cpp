@@ -3,6 +3,9 @@
 #include "person.h"
 using namespace std;
 
+
+vector<item*> personInventory;
+
 person::person()
 {
 	myPname="?";
@@ -35,6 +38,12 @@ void person::setBudget(int budget)
 int person::getBudget()
 {
 	return myBudget;
+}
+
+void person::addItem(item* ptr)
+{
+	personInventory.push_back(ptr);
+	return;
 }
 
 person::~person()
