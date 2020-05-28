@@ -9,6 +9,8 @@ using namespace std;
 
 int main(){
 
+	int sum = 0;
+
 	//initialise three stalls
 	stall *one, *two, *three;
 	item *banana, *apple, *mango;
@@ -141,8 +143,65 @@ while(budget>=0){
 						case 0:
 							layerCount = layerCount -2;
 						break;
-									
+		
 						case 1:
+						//purchase from stall 1
+						cout <<"Please enter the ID of the item you wish to purchase," << endl;
+						cout << "or enter 0 if you wish to move to another stall." << endl;
+
+						cin >> itemID;
+
+							switch (itemID) {
+
+							case 0:
+								layerCount = layerCount -2;
+
+
+							break;
+
+							case 1:
+							//move the item from the stall to the person's 'cart'
+								holder = one->getItem(itemID);
+								shopper->addItem(holder);
+								cout << endl;
+								cout << "Your cart currently contains... " << endl;
+								sum = sum + shopper->printCart();
+								budget = budget - sum;
+								cout << "You have $" << budget << " left" << endl;
+								cout << endl;
+							break;
+
+							case 2:
+								holder = one->getItem(itemID);
+								shopper->addItem(holder);
+								cout << endl;
+								cout << "Your cart currently contains... " << endl;
+								sum = sum + shopper->printCart();
+								budget = budget - sum;
+								cout << "You have $" << budget << " left" << endl;
+								cout << endl;
+							break;
+
+							case 3:
+								holder = one->getItem(itemID);
+								shopper->addItem(holder);
+								cout << endl;
+								cout << "Your cart currently contains... " << endl;
+								sum = sum + shopper->printCart();
+								budget = budget - sum;
+								cout << "You have $" << budget << " left" << endl;
+								cout << endl;
+							break;
+
+							default:
+								cout << "invalid input, please input a valid ID" << endl;
+							break;
+
+							}
+
+						break;
+
+							case 2:
 						//purchase from stall 1
 						cout <<"Please enter the ID of the item you wish to purchase," << endl;
 						cout << "or enter 0 if you wish to move to another stall." << endl;
@@ -157,40 +216,100 @@ while(budget>=0){
 
 							case 1:
 							//move the item from the stall to the person's 'cart'
-								holder = one->getItem(itemID);
+								holder = two->getItem(itemID);
 								shopper->addItem(holder);
 								cout << endl;
 								cout << "Your cart currently contains... " << endl;
 
-								shopper->printCart();
+								sum = sum + shopper->printCart();
+								budget = budget - sum;
+								cout << "You have $" << budget << " left" << endl;
 								cout << endl;
 							break;
 
 							case 2:
-								holder = one->getItem(itemID);
+								holder = two->getItem(itemID);
 								shopper->addItem(holder);
 								cout << endl;
-								cout << "you have purchased a " << endl;
-								shopper->printCart();
+								cout << "Your cart currently contains... " << endl;
+								sum = sum + shopper->printCart();
+								budget = budget - sum;
+								cout << "You have $" << budget << " left" << endl;
 								cout << endl;
 							break;
 
 							case 3:
-								holder = one->getItem(itemID);
+								holder = two->getItem(itemID);
 								shopper->addItem(holder);
 								cout << endl;
-								cout << "you have purchased a " << endl;
-								shopper->printCart();
+								cout << "Your cart currently contains... " << endl;
+								sum = sum + shopper->printCart();
+								budget = budget - sum;
+								cout << "You have $" << budget << " left" << endl;
 								cout << endl;
 							break;
 
 							default:
 								cout << "invalid input, please input a valid ID" << endl;
-								layerCount = layerCount -1;
-								cout << endl;
 							break;
 
 							}
+							break;
+
+							case 3:
+						//purchase from stall 1
+						cout <<"Please enter the ID of the item you wish to purchase," << endl;
+						cout << "or enter 0 if you wish to move to another stall." << endl;
+
+						cin >> itemID;
+
+							switch (itemID) {
+
+							case 0:
+								layerCount = layerCount -2;
+							break;
+
+							case 1:
+							//move the item from the stall to the person's 'cart'
+								holder = three->getItem(itemID);
+								shopper->addItem(holder);
+								cout << endl;
+								cout << "Your cart currently contains... " << endl;
+
+								sum = sum + shopper->printCart();
+								budget = budget - sum;
+								cout << "You have $" << budget << " left" << endl;
+								cout << endl;
+							break;
+
+							case 2:
+								holder = three->getItem(itemID);
+								shopper->addItem(holder);
+								cout << endl;
+								cout << "Your cart currently contains... " << endl;
+								sum = sum + shopper->printCart();
+								budget = budget - sum;
+								cout << "You have $" << budget << " left" << endl;
+								cout << endl;
+							break;
+
+							case 3:
+								holder = three->getItem(itemID);
+								shopper->addItem(holder);
+								cout << endl;
+								cout << "Your cart currently contains... " << endl;
+								sum = sum + shopper->printCart();
+								budget = budget - sum;
+								cout << "You have $" << budget << " left" << endl;
+								cout << endl;
+							break;
+
+							default:
+								cout << "invalid input, please input a valid ID" << endl;
+							break;
+
+							}
+							break;
 						}
 					}
 		if(budget<=0){
