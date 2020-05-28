@@ -48,12 +48,17 @@ void person::addItem(item* ptr)
 	return;
 }
 
-void person::printCart()
+int person::printCart()
 {
+	sum = 0;
 	for(int i=0;i<cart_items;i++){
-		cout << personInventory[i]->get_Name() << endl;
+		cout << personInventory[i]->get_Name() << " worth $" << personInventory[i]->get_Price() << endl;
+		sum = sum + personInventory[i]->get_Price();
+		
 	}
-	return;
+	cout << endl;
+	cout << "Totalling... $" << sum << endl;
+	return sum;
 }
 
 person::~person()
