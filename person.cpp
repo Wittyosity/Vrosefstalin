@@ -61,6 +61,21 @@ int person::printCart()
 	return sum;
 }
 
+string person::checkout()
+{
+	sum = 0;
+	for(int i=0;i<cart_items;i++){
+		cout << personInventory[i]->get_Name() << " worth $" << personInventory[i]->get_Price() << endl;
+		sum = sum + personInventory[i]->get_Price();
+		
+	}
+	cout << endl;
+	cout << "Totalling... $" << sum << endl;
+	return " ";
+}
+
+
+
 person::~person()
 {
 

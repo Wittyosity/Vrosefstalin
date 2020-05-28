@@ -35,6 +35,7 @@ public:
 
 	//function to print 
 	int printCart();
+	string checkout();
 
 	//default destructor
 	~person();
