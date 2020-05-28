@@ -1,0 +1,6 @@
+echo test 01: finish shop without maxing budget
+./market < test01.txt | diff - output01.txt
+echo test 02: incorrect inputs for name and budget
+./market < test02.txt | diff - output02.txt
+echo test 03: test maxing over budget
+./market < test03.txt | diff - output03.txt
