@@ -8,7 +8,7 @@ stall* marketplace(int num){
 	
 stall *cart;
 switch(num){
-	case 1:
+	case 0:
 	//stall *cart;
 	item *banana, *apple, *mango;
 	banana=new item("banana", "long and yellow", 1);
@@ -20,7 +20,7 @@ switch(num){
 	cart->addItem(mango);
 	//cout << "ye";
 	break;
-	case 2:
+	case 1:
 	//stall *cart;
 	item *sausage, *chicken, *bacon;
 	sausage=new item("sausage", "long and soft", 2);
@@ -31,7 +31,7 @@ switch(num){
 	cart->addItem(chicken);
 	cart->addItem(bacon);
 	break;
-	case 3:
+	case 2:
 	//stall *cart;
 	item *broccoli, *sprout, *carrot;
 	broccoli=new item("brocoli", "like a small stree", 3);
@@ -42,7 +42,7 @@ switch(num){
 	cart->addItem(sprout);
 	cart->addItem(carrot);
 	break;
-	case 4:
+	case 3:
 	//stall *cart;
 	item *chair, *table, *cupboard;
 	chair=new item("chair", "to sit on", 40);
@@ -53,7 +53,7 @@ switch(num){
 	cart->addItem(table);
 	cart->addItem(cupboard);
 	break;
-	case 5:
+	case 4:
 	//stall *cart;
 	item *cat, *dog, *fish;
 	cat=new item("cat", "probably wont love you", 100);
