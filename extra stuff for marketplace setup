@@ -1,9 +1,79 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include "stall.h"
+#include "item.h"
+#include "person.h"
+using namespace std;
+
 extern stall* marketplace(int num);
 
+int main(){
+
+int id=0, budget=0, buy=0;
 stall *market[5];
+string name;
+person *shopper;
 
 for (int i=0;i<5;i++)
 {
 	market[i]=new stall();
 	market[i]=marketplace(i);
+}
+//market[0]->printList();
+
+
+cout << "Greetings traveller! What is your name?" << endl;
+	cin >> name;
+
+	cout << "Welcome " << name << " and how much do you have to spend today?" << endl;
+	cin >> budget;
+	shopper = new person(name, budget);
+	
+	int myBudget = budget;
+
+
+
+
+cout << "Enter the id of stall you would like to visit or zero to quit: " << endl;
+
+for (int i=0;i<5;i++)
+{
+	//cout << "yes";
+	cout << i+1 << "\t" << market[i]->getName() << endl;
+}
+cin >> id;
+
+if (id==0)
+{
+	//break;
+}else{
+	market[id-1]->printList();
+	cout << "Enter id of what you would like to buy or 0 to leave stall: " << endl;
+	cin >> buy;
+	//buy=buy;
+	if (buy!=0)
+	{
+		if (budget>=(market[id]->getItem(buy))->get_Price())
+		{
+			budget=myBudget-(market[id-1]->getItem(buy))->get_Price();
+			shopper->addItem(market[id-1]->getItem(buy));
+			shopper->printCart();
+		}else{
+			cout << "you cant afford that" << endl;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+	return 0;
 }
