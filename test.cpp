@@ -61,6 +61,8 @@ int main(){
 	cout << "Welcome " << name << " and how much do you have to spend today?" << endl;
 	cin >> budget;
 	shopper = new person(name, budget);
+	int myBudget;
+	myBudget = budget;
 
 	//Purchase loop needs to start
 
@@ -165,8 +167,8 @@ while(budget>=0){
 								shopper->addItem(holder);
 								cout << endl;
 								cout << "Your cart currently contains... " << endl;
-								sum = sum + shopper->printCart();
-								budget = budget - sum;
+								sum = shopper->printCart();
+								budget = myBudget - sum;
 								cout << "You have $" << budget << " left" << endl;
 								cout << endl;
 							break;
@@ -176,8 +178,8 @@ while(budget>=0){
 								shopper->addItem(holder);
 								cout << endl;
 								cout << "Your cart currently contains... " << endl;
-								sum = sum + shopper->printCart();
-								budget = budget - sum;
+								sum = shopper->printCart();
+								budget = myBudget - sum;
 								cout << "You have $" << budget << " left" << endl;
 								cout << endl;
 							break;
@@ -187,8 +189,8 @@ while(budget>=0){
 								shopper->addItem(holder);
 								cout << endl;
 								cout << "Your cart currently contains... " << endl;
-								sum = sum + shopper->printCart();
-								budget = budget - sum;
+								sum = shopper->printCart();
+								budget = myBudget - sum;
 								cout << "You have $" << budget << " left" << endl;
 								cout << endl;
 							break;
@@ -221,8 +223,8 @@ while(budget>=0){
 								cout << endl;
 								cout << "Your cart currently contains... " << endl;
 
-								sum = sum + shopper->printCart();
-								budget = budget - sum;
+								sum = shopper->printCart();
+								budget = myBudget - sum;
 								cout << "You have $" << budget << " left" << endl;
 								cout << endl;
 							break;
@@ -232,8 +234,8 @@ while(budget>=0){
 								shopper->addItem(holder);
 								cout << endl;
 								cout << "Your cart currently contains... " << endl;
-								sum = sum + shopper->printCart();
-								budget = budget - sum;
+								sum = shopper->printCart();
+								budget = myBudget - sum;
 								cout << "You have $" << budget << " left" << endl;
 								cout << endl;
 							break;
@@ -243,8 +245,8 @@ while(budget>=0){
 								shopper->addItem(holder);
 								cout << endl;
 								cout << "Your cart currently contains... " << endl;
-								sum = sum + shopper->printCart();
-								budget = budget - sum;
+								sum = shopper->printCart();
+								budget = myBudget - sum;
 								cout << "You have $" << budget << " left" << endl;
 								cout << endl;
 							break;
@@ -276,8 +278,8 @@ while(budget>=0){
 								cout << endl;
 								cout << "Your cart currently contains... " << endl;
 
-								sum = sum + shopper->printCart();
-								budget = budget - sum;
+								sum = shopper->printCart();
+								budget = myBudget - sum;
 								cout << "You have $" << budget << " left" << endl;
 								cout << endl;
 							break;
@@ -287,8 +289,8 @@ while(budget>=0){
 								shopper->addItem(holder);
 								cout << endl;
 								cout << "Your cart currently contains... " << endl;
-								sum = sum + shopper->printCart();
-								budget = budget - sum;
+								sum = shopper->printCart();
+								budget = myBudget - sum;
 								cout << "You have $" << budget << " left" << endl;
 								cout << endl;
 							break;
@@ -298,8 +300,8 @@ while(budget>=0){
 								shopper->addItem(holder);
 								cout << endl;
 								cout << "Your cart currently contains... " << endl;
-								sum = sum + shopper->printCart();
-								budget = budget - sum;
+								sum = shopper->printCart();
+								budget = myBudget - sum;
 								cout << "You have $" << budget << " left" << endl;
 								cout << endl;
 							break;
@@ -314,6 +316,8 @@ while(budget>=0){
 					}
 		if(budget<=0){
 		cout << "You are out of money." << endl;
+		cout << "Your shopping trip has come to an end" << endl;
+		break;
 		//print reciept
 		}
 	}
