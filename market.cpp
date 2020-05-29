@@ -89,7 +89,7 @@ while(budget>0){
 			layer = layer - 1;
 			cout << endl;
 		}
-		else if (budget >= (market[id]->getItem(buy))->get_Price()){
+		else if (budget >= (market[id-1]->getItem(buy))->get_Price()){
 				budget = myBudget-(market[id-1]->getItem(buy))->get_Price();
 				shopper->addItem(market[id-1]->getItem(buy));
 				sum = shopper->printCart();
@@ -98,6 +98,7 @@ while(budget>0){
 				cout << endl;
 		}
 		else{
+			cout << endl;
 			cout << "You can't afford that." << endl;
 			cout << endl;
 		}
